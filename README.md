@@ -1,24 +1,25 @@
-Логістична карта ЄС з пошуком найкоротшого маршруту
+# Description
 
-Ця програма моделює спрощену логістичну карту великих міст Європейського Союзу у вигляді графа. Її мета — знаходження найкоротшого маршруту між двома містами з урахуванням відстані та середньої швидкості. Для розв’язання цієї задачі використовується алгоритм Дейкстри.
-Ключові особливості програми:
+This program simulates a simplified logistics map of major cities in the European Union, represented as a graph. Its primary purpose is to calculate the shortest route between two cities, factoring in distance and average travel speed. The implementation leverages Dijkstra's algorithm to efficiently determine the optimal path.
 
-  Створення графа:
-        Кожна вершина графа представляє місто, з координатами для візуалізації.
-        Кожне ребро графа має два параметри:
-            Відстань між містами.
-            Середню швидкість подорожі.
+# Features
 
-  Візуалізація графа:
-        Візуалізується логістична карта, де:
-            Вершини (міста) позначені точками.
-            Ребра (дороги) — лініями.
+- Graph
+  - Nodes: Represent cities, with coordinates provided for visualization.
+  - Edges: Represent roads with two key parameters:
+    - Distance: The distance between connected cities.
+    - Average Speed: The estimated average travel speed.
 
-  Алгоритм Дейкстри:
-        Знаходить найкоротший шлях між двома обраними містами.
-        Працює за принципом пріоритетної черги, реалізованої через бібліотеку heapq.
+- Visualization
+  - A graphical representation of the logistics network:
+    - Cities (nodes) are displayed as points.
+    - Roads (edges) are displayed as connecting lines.
 
-  Вивід результатів:
-        Показує найкоротший маршрут у вигляді списку міст.
-        Розраховує час у дорозі.
-        Відображає візуалізацію маршруту на графі.
+- Shortest Route Calculation
+  - Implements Dijkstra's Algorithm to find the shortest path between two user-selected cities.
+  - Utilizes a priority queue (heapq) to optimize route computation.
+
+- Result Output
+  - Shortest Route: Lists the sequence of cities forming the shortest path.
+  - Travel Time: Calculates and displays the total travel time for the route.
+  - Route Visualization: Highlights the identified shortest route on the graph.
